@@ -1,6 +1,8 @@
+using BookSite2._0.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -24,6 +26,14 @@ namespace BookSite2._0
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
+            services.AddDbContext<BookstoreContext>(options =>
+            {
+                options.UseSqlite(Configuration["ConnectionStrings:BookstoreConnection"]);
+            });
+
+            services.AddScoped<IBookSiteRepository, EFBookSiteRepository>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -40,6 +50,7 @@ namespace BookSite2._0
                 app.UseHsts();
             }
             app.UseHttpsRedirection();
+            //Corresponds to the wwwroot
             app.UseStaticFiles();
 
             app.UseRouting();
@@ -48,9 +59,7 @@ namespace BookSite2._0
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapDefaultControllerRoute();
             });
         }
     }

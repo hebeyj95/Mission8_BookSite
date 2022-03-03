@@ -1,4 +1,5 @@
 ﻿using BookSite2._0.Models;
+using BookSite2._0.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -11,17 +12,40 @@ namespace BookSite2._0.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private IBookSiteRepository repo;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(IBookSiteRepository temp)
         {
-            _logger = logger;
+            repo = temp;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(int pageNum = 1)
         {
-            return View();
+
+            int pageSize = 10;
+
+            var x = new BooksViewModel
+            {
+                Books = repo.Books
+                .OrderBy(b => b.Title)
+                .Skip((pageNum - 1) * pageSize)
+                .Take(pageSize),
+
+                PageInfo = new PageInfo
+                {
+                    TotalNumBooks = repo.Books.Count(),
+                    BooksPerPage = pageSize,
+                    CurrentPage = pageNum
+                }
+
+            };
+
+            return View(x);
         }
+
+
+
+
 
         public IActionResult Privacy()
         {
