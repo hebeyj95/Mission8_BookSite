@@ -79,3 +79,7 @@ C:\Users\Heber\source\repos\Mission8_BookSite\obj\Debug\netcoreapp3.1\BookSite2.
 C:\Users\Heber\source\repos\Mission8_BookSite\obj\Debug\netcoreapp3.1\BookSite2.0.genruntimeconfig.cache
 C:\Users\Heber\source\repos\Mission8_BookSite\obj\Debug\netcoreapp3.1\Razor\Views\Shared\BookSummary.cshtml.g.cs
 C:\Users\Heber\source\repos\Mission8_BookSite\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\Types\Default.cshtml.g.cs
+C:\Users\Heber\source\repos\Mission8_BookSite\obj\Debug\netcoreapp3.1\Razor\Pages\Purchase.cshtml.g.cs
+C:\Users\Heber\source\repos\Mission8_BookSite\obj\Debug\netcoreapp3.1\Razor\Pages\_Layout.cshtml.g.cs
+C:\Users\Heber\source\repos\Mission8_BookSite\obj\Debug\netcoreapp3.1\Razor\Pages\_ViewImports.cshtml.g.cs
+C:\Users\Heber\source\repos\Mission8_BookSite\obj\Debug\netcoreapp3.1\Razor\Pages\_ViewStart.cshtml.g.cs

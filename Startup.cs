@@ -34,6 +34,11 @@ namespace BookSite2._0
 
             services.AddScoped<IBookSiteRepository, EFBookSiteRepository>();
 
+            services.AddRazorPages();
+
+            services.AddDistributedMemoryCache();
+            services.AddSession();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -52,6 +57,8 @@ namespace BookSite2._0
             app.UseHttpsRedirection();
             //Corresponds to the wwwroot
             app.UseStaticFiles();
+
+            app.UseSession();
 
             app.UseRouting();
 
@@ -74,6 +81,8 @@ namespace BookSite2._0
 
 
                 endpoints.MapDefaultControllerRoute();
+
+                endpoints.MapRazorPages();
             });
         }
     }

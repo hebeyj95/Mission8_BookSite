@@ -33,8 +33,15 @@ using BookSite2._0.Models.ViewModels;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 6 "C:\Users\Heber\source\repos\Mission8_BookSite\Views\_ViewImports.cshtml"
+using BookSite2._0.Infrastructure;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"df343c03537b3695677fa12de0dc4439309ffc9a", @"/Views/Shared/Components/Types/Default.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"6e4217c3a2c99bc2fd5236df774fea351d3f9137", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"2537f96b3068d8da87a7adf8981fc8cbc39e4500", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared_Components_Types_Default : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<IEnumerable<string>>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("class", new global::Microsoft.AspNetCore.Html.HtmlString("btn btn-sm btn-block btn-outline-secondary"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -67,7 +74,7 @@ using BookSite2._0.Models.ViewModels;
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
             WriteLiteral("\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "df343c03537b3695677fa12de0dc4439309ffc9a4940", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "df343c03537b3695677fa12de0dc4439309ffc9a5128", async() => {
                 WriteLiteral("Home");
             }
             );
@@ -103,7 +110,7 @@ using BookSite2._0.Models.ViewModels;
 #line hidden
 #nullable disable
             WriteLiteral("        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "df343c03537b3695677fa12de0dc4439309ffc9a7378", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "df343c03537b3695677fa12de0dc4439309ffc9a7566", async() => {
 #nullable restore
 #line 13 "C:\Users\Heber\source\repos\Mission8_BookSite\Views\Shared\Components\Types\Default.cshtml"
                                                                                                                                                                                                     Write(t);
