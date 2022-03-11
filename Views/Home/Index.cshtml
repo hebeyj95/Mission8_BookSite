@@ -5,24 +5,21 @@
 @model BooksViewModel
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-
+    <h1 class="display-4">Welcome to Book Site</h1>
     <div class="text-left">
+
+        <br />
         @foreach (Book b in Model.Books)
         {
-            <h3>@b.Title</h3>
-            <ul>
-                <li>Author: @b.Author</li>
-                <li>Publisher: @b.Publisher</li>
-                <li>ISBN: @b.Isbn</li>
-                <li>Category: @b.Category</li>
-                <li>Number of Pages: @b.PageCount</li>
-                <li>Price: $@b.Price</li>
-            </ul>
+            <partial name="BookSummary" model="b"/>
         }
 
-    <div page-blah="@Model.PageInfo" page-action="Index" class="d-flex justify-content-center"></div>
+    <div page-blah="@Model.PageInfo" page-action="Index" 
+         page-class="btn ml-2" 
+         page-class-normal="btn-outline-dark" 
+         page-class-selected="btn-primary"
+         page-classes-enabled="true"
+         class="d-flex justify-content-center"></div>
 
     </div>
 
